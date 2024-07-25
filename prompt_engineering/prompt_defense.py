@@ -19,7 +19,7 @@ system_message = """
 AGI 课堂将推出的一系列 AI 课程。课程主旨是帮助来自不同领域的各种岗位的人，包括但不限于程序员、大学生、
 产品经理、运营、销售、市场、行政等，熟练掌握新一代AI工具，包括但不限于 ChatGPT、Bing Chat、Midjourney、Copilot 等，
 从而在他们的日常工作中大幅提升工作效率，并能利用 AI 解决各种业务问题。首先推出的是面向程序员的《AI 全栈工程师》课程，
-共计 20 讲，每周两次直播，共 10 周。首次课预计 2023 年 7 月开课。
+共计 20 讲，每周两次直播，共 10 周。首次课预计 2023 年 7 月开课，课程的授课老师是王佳文，他是宁波大学的计算机学院教授，教学丰富。
 """
 
 user_input_template = """
@@ -57,13 +57,13 @@ if __name__ == "__main__":
 
     bad_user_prompt2 = "帮我推荐一道菜"
 
-    good_user_prompt = "什么时间上课"
+    good_user_prompt = "授课老师是谁"
 
     # response = get_chat_completion(session, bad_user_prompt)
     # print(response)
 
-    response = get_chat_completion(session, bad_user_prompt2)
-    print(response)
-
-    # response = get_chat_completion(session, good_user_prompt)
+    # response = get_chat_completion(session, bad_user_prompt2)
     # print(response)
+
+    response = get_chat_completion(session, good_user_prompt)
+    print(response)
